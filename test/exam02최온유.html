@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2021년 1학기 성적</title>
+    <!-- 최온유 -->
+    <style>
+        td {text-align: center;}
+    </style>
+    <script src="data.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border=1 text-align=center>");
+        document.write("<caption>2021년 1학기 성적</caption>")
+        document.write("<tr><th>이름</th><th>중간성적</th><th>기말성적</th><th>총점</th><th>평균</th></tr>");
+        for (i=0; i<stu.length; i++) {
+            document.write("<tr><td>" + stu[i].name + "</td><td>" 
+                + stu[i].middle + "</td><td>" + stu[i].final + "</td><td>"
+                + stu[i].total + "</td><td>" + stu[i].avg + "</td></tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

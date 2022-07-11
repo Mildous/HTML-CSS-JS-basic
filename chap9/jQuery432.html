@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery를 이용한 요소 내용의 동적 변경(2)</title>
+    <script src="../jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#b1').click(function() {
+                var pTag = document.getElementById("p1");
+                var txt = "이제부터는 자바스크립트를 공부합니다!";
+                txt = txt + "<br><hr><img src='../chap9/image/jslogo.png' width=150 height=100/><hr>";
+                txt = txt + "<p>즐겁게 열심히 합시다!</p>";
+                $("#p1").html(txt);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Web Programming!</h2>
+    <p id="p1">지금까지 HTML과 CSS를 공부했습니다.</p>
+    <button id="b1">Next</button>
+</body>
+</html>

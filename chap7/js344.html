@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>screen 객체를 이용한 윈도우 크기 지정</title>
+</head>
+<body>
+<button onclick="halfWindow();">half-window</button>
+<button onclick="quaterWindow();">quater-window</button>
+<script>
+    function halfWindow() {
+        var w1 = window.open('', '', 'width=200, height=150');
+        var width = screen.width / 2;
+        var height = screen.height / 2;
+        w1.top += 200; w1.left += 200;
+        w1.resizeTo(width, height);
+    }
+    function quaterWindow() {
+        var w1 = window.open('', '', 'width=200, height=150');
+        var width = screen.width / 4;
+        var height = screen.height / 4;
+        w1.top = 0; w1.left = 0;
+        w1.resizeTo(width, height);
+    }
+</script>
+</body>
+</html>

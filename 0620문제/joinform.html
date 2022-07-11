@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ui.css">    
+</head>
+<body>
+    <form class="join">
+        <table class="join-item" border="1">
+            <caption class="join-title">홈쇼핑 회원등록</caption>
+            <tr>
+                <td>회원번호(자동생성)</td>
+                <td><input type="number"/></td>
+            </tr>
+            <tr>
+                <td>회원성명</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>회원전화번호</td>
+                <td><input type="number"/></td>
+            </tr>
+            <tr>
+                <td>회원주소</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>가입일자</td>
+                <td><input type="date" id="time"/></td>
+            </tr>
+            <tr>
+                <td>고객등급(A:VIP B:일반 C:직원)</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr>
+                <td>도시코드</td>
+                <td><input type="text"/></td>
+            </tr>
+            <tr style="text-align: center; ">
+                <td colspan="2"><input type="submit" value="입력"><input type="button" value="조회" style="margin-left: 1rem;"></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+       document.getElementById('time').value = new Date().toISOString().substring(0, 10);
+    </script>
+</body>
+</html>

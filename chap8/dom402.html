@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>load 이벤트 처리를 사용하지 않은 이미지 파일 크기 출력</title>
+</head>
+<body>
+    <img id="fig1" src="image/image1.JPG" width="200" height="150" onclick="f();"/><br>
+    <p id="demo"></p>
+    <img id="fig2" src=""/>
+
+    <script>
+        function f() {
+            var obj = document.getElementById("fig2");
+            obj.src = "image/image2.jpg";   // 이미지 파일 요청 및 백그라운드 로딩 시작
+            document.getElementById("demo").innerHTML = '이미지 파일 크기: ' + obj.width + ' x ' + obj.height;
+        }
+    </script>
+</body>
+</html>

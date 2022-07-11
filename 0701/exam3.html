@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam3.html</title>
+    <style>
+        *{padding:0; margin: 0;}
+        h2 { margin: 10px;}
+        hr { margin-bottom: 10px; width: 558px; }
+        li{list-style:none}
+        a{text-decoration:none;font-size:14px}
+        .menu {
+          width: 700px;
+          overflow: hidden;
+          margin: 10px 0;
+        }
+        .menu > li {
+          width: 20%;
+          float: left;
+          text-align: center;
+          line-height: 40px;
+          background-color: #dab5da;
+        }
+        .menu a {
+          color: black;
+        }
+        .submenu > li {
+          line-height: 50px;
+          background-color: #e7e7e7;
+        }
+        .submenu {
+          height: 0;
+          overflow: hidden;
+        }
+        .menu > li:hover {
+          background-color: #a8a8a8;
+        }
+        .menu > li:hover .submenu {
+          height: 150px;
+        }
+        .menu > li:hover .submenu li:hover {
+          width: 100%;
+          background-color: #a8a8a8;
+        }
+        p {
+            font-size: 14px;
+            padding: 10px 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>HTML5 웹 프로그래밍</h1><hr>
+        <div id="menu">
+            <ul class="menu">
+                <li>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <a href="">메뉴1</a>
+                    <ul class="submenu">
+                        <li><a href="">서브메뉴 11</a></li>
+                        <li><a href="">서브메뉴 12</a></li>
+                        <li><a href="">서브메뉴 13</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">메뉴2</a>
+                    <ul class="submenu">
+                        <li><a href="">서브메뉴 21</a></li>
+                        <li><a href="">서브메뉴 22</a></li>
+                        <li><a href="">서브메뉴 23</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">메뉴3</a>
+                    <ul class="submenu">
+                        <li><a href="">서브메뉴 31</a></li>
+                        <li><a href="">서브메뉴 32</a></li>
+                        <li><a href="">서브메뉴 33</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>carendar.html</title>
+    <!-- nateget@nate.com -->
+    <style>
+        table { width:1000px; margin: 0 auto; border-collapse: collapse; font-family:Verdana, sans-serif;
+                border-left: solid white; border-right: solid white;}
+        #year {font-size: 100px; text-align: left; font-weight: bold;}
+        #month {font-size: 50px; font-weight: bold;}
+        th { font-size: 20px; height: 40px; text-align: center;
+             font-weight: bold; border-top: solid white;
+             border-left: solid white; border-right: solid white;}
+        td { width: 14.2%; padding-left: 10px; padding-top: 10px;
+            height: 80px; vertical-align: top; font-weight: bold;
+            border-left: solid 1px black; border-right: solid 1px black;}
+        .c1 { color: red; font-weight: bold;}
+        .c2 { color: rgb(0, 110, 255); font-weight: bold;}
+        .event { color: blue; }
+        .c3 { color: crimson; font-size: small; text-align: right;
+             font-weight: bold; padding-right: 10px;}
+    </style>
+</head>
+<body>
+<table border="1">
+<caption id="year">2022년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span id="month">6월</span></caption>
+<thead>
+    <tr><th class="c1">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="c2">토</th></tr>
+</thead>
+<tbody>
+    <tr><td></td><td></td><td></td><td>1<div class="event">의병의날, 지방선거</div></td><td>2</td><td>3<br>단오</td><td class="c2">4</td></tr>
+    <tr><td class="c1">5<div class="event">환경의 날</div></td><td>6<div class="event">현충일, 망종</div></td><td>7<br><div class="c3"><br><br>손없는날</div></td><td>8<div class="c3"><br><br>손없는날</div></td><td>9<div class="event">구강보건의날</div></td><td>10<div class="event">6.10민주항쟁</div></td><td class="c2">11</td></tr>
+    <tr><td class="c1">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17<div class="c3"><br><br>손없는날</div></td><td class="c2">18<br><div class="c3"><br><br>손없는날</div></td></tr>
+    <tr><td class="c1">19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td class="c2">25</td></tr>
+    <tr><td class="c1">26</td><td>27<br><div class="c3"><br><br>손없는날</div></span></td><td>28<br><div class="c3"><br><br>손없는날</div></td><td>29</td><td>30</td><td></td><td></td></tr>
+</tbody>
+</table>    
+</body>
+</html>

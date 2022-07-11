@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>focus와 blur 이벤트 처리</title>
+    <!-- focus 이벤트는 특정 필드의 입력을 시작할 때 그 사실을 알려주거나 해당 입력 필드의 입력자료 형식 등을 안내할때 사용되고,
+    blur 이벤트는 입력이 끝난 후 입력된 데이터 형식을 확인하거나 자동으로 변경할 때 사용된다. -->
+</head>
+<body>
+    영 문 명 : <input type="text" id="fname" onfocus="f1();" onblur="f2()" /><br>
+    연 락 처 : <input type="text"/>
+    <script>
+        function f1() {
+            var x = document.getElementById("fname");
+            x.style.background = "skyblue";
+        }
+        function f2() {
+            var x = document.getElementById("fname");
+            x.style.background = "white";
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>

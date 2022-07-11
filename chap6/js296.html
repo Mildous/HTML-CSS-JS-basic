@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js296.html</title>
+</head>
+<body>
+<script>
+    var student1 = [ ['강민성', '컴공', 88, 76],
+                     ['김정아', '수학', 70, 83],
+                     ['신은수', '행정', 92, 95],
+                     ['이은준', '물리', 85, 92],
+                     ['조우진', '건축', 97, 88]
+                    ]
+    var student = new Array(Array('강민성', '컴공', 88, 76),
+                            Array('김정아', '수학', 70, 83),
+                            Array('신은수', '행정', 92, 95),
+                            Array('이은준', '물리', 85, 92),
+                            Array('조우진', '건축', 97, 88)
+                            );
+    document.write("<h2>성적 테이블</h2>");
+    document.write("<table border='1'>");
+    document.write("<tr><th>이름</th><th>전공</th><th>중간</th><th>기말</th></tr>");
+    for(i=0; i<student.length; i++) {
+        document.write("<tr>");
+        for(j=0; j<student[i].length; j++) {
+            document.write("<td>" + student[i][j] + "</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>

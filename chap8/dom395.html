@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>표준 이벤트 모델을 이용한 dom391의 재작성</title>
+    <script>
+        window.onload = function() {
+            document.getElementById("b1").addEventListener("click", dataReading);
+        }
+        function dataReading() {
+            var output = "가장 좋아하는 전공과목: ";
+            var obj = document.getElementById("s");
+            output = output + obj.options[obj.selectedIndex].value;
+            var obj = document.getElementById("result");
+            obj.innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h3>가장 좋아하는 전공 과목은 ? </h3>
+    <select id="s" multiple>
+        <option value="데이터베이스" selected>데이터베이스</option>
+        <option value="알고리즘">알고리즘</option>
+        <option value="웹 프로그래밍">웹 프로그래밍</option>
+        <option value="컴퓨터 구조">컴퓨터 구조</option>
+        <option value="컴퓨터네트워크">컴퓨터네트워크</option>
+        <option value="프로젝트">프로젝트</option>
+    </select>
+    <button id="b1">선택완료</button><hr>
+    <div id="result"></div>
+</body>
+</html>

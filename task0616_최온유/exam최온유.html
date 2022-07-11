@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>여행 버킷 리스트</title>
+    <!-- 최온유 -->
+</head>
+<body>
+    <h2><img id="mainLogo" src="html5logo.PNG" width="50" height="50" onclick="clickLogo();" onmouseover="overLogo();" onmouseout="outLogo();"/>여행 버킷 리스트 ! </h2><hr>
+    <ul id="bucketList">
+        <li><a id="jejudo" onmouseover="showImg();" onmouseout="hideImg();">제주도</a></li>
+        <div id="jejuImg" img src="" alt=""></div>
+        <li><a id="hawaii">하와이</a></li>
+        <li id="gc" onclick="clickText();">그랜드캐년</li>
+    </ul><br>
+    <input type="text" max="20" id="subject"/>
+    <button onclick="addTourList(); return false;">추천 여행지</button>
+    <fieldset>
+        <legend>추천된 여행지 리스트</legend>
+            <ol id="tourList">
+            </ol>
+    </fieldset>
+
+    <script>
+        function showImg() {    // 제주도 이미지 보여주기
+            var showJeju = document.getElementById("jejuImg");
+            showJeju.innerHTML = "<img src='jeju.jpg' width='200' height='150'>";
+        }
+        function hideImg() {    // 제주도 이미지 없애기
+            var hideJeju = document.getElementById("jejuImg");
+            hideJeju.innerHTML = "";
+        }
+        let state = 0;
+        function clickLogo() {  // 로고 클릭시 로고 변경
+            if(state == 0) {
+                state = 1;
+                document.getElementById("mainLogo").src = "tourlogo.jpg";
+            }else{
+                state = 0;
+                document.getElementById("mainLogo").src = "html5logo.PNG";
+            }
+        }
+        let logo = document.getElementById("mainLogo"); // 로고 바꾸기
+        logo.addEventListener("mouseover", function() {
+            if(state === 0) {
+            document.getElementById("mainLogo").src = "tourLogo.jpg";
+            }
+        });
+        logo.addEventListener("mouseout",  function() { // 로고 원래대로
+            if(state === 0) {
+            document.getElementById("mainLogo").src = "html5logo.PNG";
+            }
+        });
+        
+        var gcstate = 0;
+        function clickText() {  // '그랜드캐년' 텍스트 클릭 시 텍스트 변경하기
+            if(gcstate == 0) {
+                gcstate = 1;
+                document.getElementById("gc").innerText = "자이언캐년";
+            }else if(gcstate == 1){
+                gcstate = 2;
+                document.getElementById("gc").innerText = "브라이언캐년";
+            }else if(gcstate == 2) {
+                gcstate = 0;
+                document.getElementById("gc").innerText = "그랜드캐년";
+            }
+        }
+
+        function addTourList() {    // 추천여행지 버튼 클릭시 리스트 추가
+            var addList = document.createElement("li");
+            var subject = document.querySelector("#subject");
+            var newText = document.createTextNode(subject.value);
+            addList.appendChild(newText);
+            addList.setAttribute("ondblclick", "addBucketList(this)");
+
+            var list = document.querySelector("#tourList");
+            list.appendChild(addList);
+
+            subject.value = "";
+        }
+
+        function addBucketList(obj) {   // 추천여행지 더블클릭시 버킷리스트로 추가
+            let addBList = document.getElementById("bucketList");
+            addBList.appendChild(obj);
+        }
+
+        let backColor = document.getElementById("hawaii");  // 하와이 마우스오버시 배경색 변경
+        backColor.addEventListener("mouseover", function() {
+            document.getElementById("hawaii").style.backgroundColor = 'lightgray';
+        })
+        backColor.addEventListener("mouseout", function() { // 마우스아웃시 원래대로
+            document.getElementById("hawaii").style.backgroundColor = '';
+        })
+
+    </script>
+</body>
+</html>

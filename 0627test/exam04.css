@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* css 세팅값 초기화 */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* header */
+header { 
+    background: blue; 
+    color: white;
+    text-align: center; 
+    height: 100px; 
+}
+header h1 {
+    line-height: 100px;
+    position: relative;
+    left: 0px;
+    top: 5px;
+}
+
+
+/* nav(menu) */
+nav { 
+    background-color: rgb(0, 191, 255); 
+    height: 50px; 
+    line-height: 50px;
+}
+nav #gnb {
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+}
+nav #gnb li {
+    float: left;
+}
+nav #gnb li a {
+    display: block; /* 인라인 요소는 block을 설정하여 크기 조절 가능 */
+    font: bold 15px/1 "arial";
+    color: blue;
+    padding: 17.5px 50px;
+    transition: all 0.5s;
+}
+nav #gnb li a:hover {
+    height: 100%;
+    background: rgb(164, 214, 255);
+    color: blue;
+}
+
+/* section */
+section {
+    padding-top: 40px;
+    background: white; 
+    color: black; 
+    height: 500px;
+}
+.h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+pre { 
+    margin-left: 5%;
+}
+iframe {
+    width: 100%; height: 100%;
+}
+
+
+/* footer */
+footer { 
+    margin: 0px auto;
+    font: normal 15px/1 "arial";
+    text-align: center; 
+    background: blue;
+    color: white; height: 100px; line-height: 100px; 
+}
+
+/* table */
+ #memberJoin, #coffeeJoin, #memberForm, #coffeelist {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#member {
+    width: 430px; 
+    height: 200px;
+}
+#caption {
+    margin-bottom: 2rem;
+}
+.joinFormList {
+    text-align: center;
+}
+.coffeeJoinList {
+    width: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+.coffeeJoinValue {
+    width: 450px;
+}
+#memberForm td, #coffeelist td {
+    padding: 0px 10px;
+    text-align: center;
+}
+#memberForm th, #coffeelist th {
+    padding: 0px 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform219.html</title>
+    <style>
+        #img1 {margin: 10px; transform: translate(10px, 50px);}
+        #img2 {margin: 10px; transform: rotate(-20deg);} /* 양수: 시계 방향, 음수:반시계 방향 */
+        #img3 {margin: 10px; transform: skew(-10deg, -10deg);}
+        #img4 {margin: 10px; transform: scale(0.5, 0.5);}
+        #img5 {margin: 10px; transform: scaleX(1.5);}
+    </style>
+</head>
+<body>
+    기본 : <img src="img/image1.jpg" width="200" height="150"/>
+    이동 : <img src="img/image1.jpg" id="img1" width="200" height="150"/>
+    회전 : <img src="img/image1.jpg" id="img2" width="200" height="150"/><br>
+    왜곡 : <img src="img/image1.jpg" id="img3" width="200" height="150"/>
+    축소 : <img src="img/image1.jpg" id="img4" width="200" height="150"/>
+    확대 : <img src="img/image1.jpg" id="img5" width="200" height="150"/>
+
+</body>
+</html>

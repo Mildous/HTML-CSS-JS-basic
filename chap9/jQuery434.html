@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery를 이용한 요소 속성의 동적인 변경</title>
+    <script src="../jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeOn() {$("#light").attr("src", "../chap9/image/lighton.png");};
+        $(document).ready(function() {
+            $("b1").click(changeOn);
+            $("b2").click(function() {$("#light").attr("src", "../chap9/image/lightoff.png");});
+        });
+    </script>
+</head>
+<body>
+    <h3>What Can JavaScript Do ? </h3>
+    <button id="b1">전구켜기</button><img id="light" src="../chap9/image/lightoff.png" style="width:70px">
+    <button id="b2">전구끄기</button>
+</body>
+</html>

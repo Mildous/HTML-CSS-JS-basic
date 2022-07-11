@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>calendar.html</title>
+    <!-- nateget@nate.com -->
+    <style>
+        table {border-collapse: collapse; font-family:Verdana, Geneva, Tahoma, sans-serif;}
+        th {font-size: 22px; height: 40px; text-align: center; font-weight: bold;}
+        td {padding: 3px; width: 120px; height: 90px; vertical-align: top;
+            border: 1px solid black; font-weight: bold; font-size: large;
+            position: relative;}
+        td:nth-child(1), th:nth-child(1) {color:#cc0000;} /* 1번째 열 빨간색 처리 */
+        th:nth-child(7) {color:#3366FF;} /* 7번째 열의 테이블 헤드 파란색 처리 */
+        .holiday {color: #cc0000;} /* 공휴일 날짜 빨간색 처리 */
+        .pubday {color: #3366FF; font-size: small; font-weight: bold; position: absolute; left:0; padding-top: 8%;} /* 국경일 */
+        .hands {color: #cc0000; font-size: small; font-weight: bold; position: absolute; right:0; bottom:0;} /* 손 없는날 */
+        #yy {font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 80px; text-align: left; vertical-align: sub; font-weight: bold;} /* 년도 */
+        #mm {font-family:Verdana, Geneva, Tahoma, sans-serif; font-size: 45px; text-align: center; vertical-align: sub; font-weight: bold;} /* 월 */
+        #lineleft {border-left: hidden;} /* 테이블 왼쪽 선 지우기 */
+        #lineright {border-right: hidden;} /* 테이블 오른쪽 선 지우기 */
+
+    </style>
+</head>
+<body>
+    <table>
+      <div><span id="yy">2022년&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span id="mm">6월</span></div><br>
+        <thead>
+            <tr>
+                <th>일</th>
+                <th>월</th>
+                <th>화</th>
+                <th>수</th>
+                <th>목</th>
+                <th>금</th>
+                <th>토</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="lineleft"></td>
+                <td></td>
+                <td></td>
+                <td class="holiday">1
+                <div class="pubday">의병의날, 지방선거</div></td>
+                <td>2</td>
+                <td>3<br><div class="pubday">단오</div></td>
+                <td id="lineright">4</td>
+            </tr>
+            <tr>
+                <td id="lineleft">5<div class="pubday">환경의날</div></td>
+                <td class="holiday">6<div class="pubday">현충일, 망종</div></td>
+                <td>7<div class="hands">손없는날</div></td>
+                <td>8<div class="hands">손없는날</div></td>
+                <td>9<br><div class="pubday">구강보건의날</div></td>
+                <td>10<br><div class="pubday">6.10민주항쟁</div></td>
+                <td id="lineright">11</td>
+            </tr>
+            <tr>
+                <td id="lineleft">12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17<div class="hands">손없는날</div></td>
+                <td id="lineright">18<div class="hands">손없는날</div></td>
+            </tr>
+            <tr>
+                <td id="lineleft">19</td>
+                <td>20</td>
+                <td>21<br><div class="pubday">하지</div></td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td id="lineright">25<br><div class="pubday">6.25한국전쟁</div></td>
+            </tr>
+            <tr>
+                <td id="lineleft">26</td>
+                <td>27<div class="hands">손없는날</div></td>
+                <td>28<div class="pubday">철도의날</div><div class="hands">손없는날</div></td>
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td id="lineright"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

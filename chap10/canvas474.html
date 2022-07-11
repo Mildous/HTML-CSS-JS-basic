@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그림자 효과 나타내기</title>
+</head>
+<body>
+    <canvas id="c1" width="300" height="300" style="border: 1px solid gray"/>
+    <script>
+        var c = document.getElementById("c1");
+        /** @type{CanvasRenderingContext2D} */
+        var obj = c.getContext("2d");
+
+        obj.beginPath();
+        obj.rect(20, 20, 100, 80);  // 사각형1 그리기
+        obj.fillStyle = "gray";
+        obj.fill();
+
+        obj.shadowColor = "blue"; obj.shadowBlur = 20;
+        obj.shadowOffsetX = 15; obj.shadowOffsetY = 20;
+        obj.globalAlpha = 0.5;
+
+        obj.beginPath();    // 새로운 경로 시작
+        obj.rect(150, 20, 100, 80); // 사각형2 그리기
+        obj.fillStyle = "green";
+        obj.fill();
+
+        obj.beginPath();
+        obj.arc(150, 200, 80, 0, 1.5*Math.PI);  // 원호 그리기
+        obj.fillStyle = "red";
+        obj.fill();
+    </script>
+</body>
+</html>

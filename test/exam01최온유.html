@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 최온유 -->
+    <style>
+        caption {font-size: 20px; font-weight: bold;}
+    </style>
+</head>
+<body>
+    <table border="1"><caption>Input 태그 연습하기</caption>
+        <tr><th>이름</th><td><input type="text" name="name" size=20/></td></tr>
+        <tr><th>비밀번호</th><td><input type="password" name="pw" size=20/></td></tr>
+        <tr><th>생일</th><td><input type="date" name="birth"/></td></tr>
+        <tr><th>나이</th><td><input type="text" name="age" size=20/></td></tr>
+        <tr><th>입력 불가능</th><td><input type="text" disabled size="20"/></td></tr>
+        <tr><th>프로필 사진</th><td><input type="file" name=""/></td></tr>
+        <tr><th>성별</th>
+            <td><label><input type="radio" name="gender" value="male"/>남성</label>
+                <label><input type="radio" name="gender" value="female" checked/>여성</label></td></tr>
+        <tr><th>관심분야</th>
+            <td><label><input type="checkbox" name="concern" value="movie"/>영화</label>
+                <label><input type="checkbox" name="concern" value="art"/>미술</label>
+                <label><input type="checkbox" name="concern" value="sport" checked/>운동</label>
+                <label><input type="checkbox" name="concern" value="music"/>음악</label></td></tr>
+        <tr><td colspan="2" align="center">
+            <input type="submit" value="제출"/>&nbsp;&nbsp;
+            <input type="reset" value="초기화"/></td></tr>
+    </table>
+</body>
+</html>

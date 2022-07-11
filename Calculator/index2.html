@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-soperatore=1.0">
+    <title>계산기</title>
+    <!-- eval() 내장함수 사용 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display">
+        <input type="text" id="result">
+        <div class="buttonWrap">
+            <input type="button" class="btnTop" value="Back" onclick="backSpace()">
+            <input type="button" class="btnTop" value="C" onclick="clearDisplay()">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="7" onclick="btnClick(7)">
+            <input type="button" class="btn" value="8" onclick="btnClick(8)">
+            <input type="button" class="btn" value="9" onclick="btnClick(9)">
+            <input type="button" class="btn" value="/" onclick="btnClick('/')">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="4" onclick="btnClick(4)">
+            <input type="button" class="btn" value="5" onclick="btnClick(5)">
+            <input type="button" class="btn" value="6" onclick="btnClick(6)">
+            <input type="button" class="btn" value="*" onclick="btnClick('*')">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="1" onclick="btnClick(1)">
+            <input type="button" class="btn" value="2" onclick="btnClick(2)">
+            <input type="button" class="btn" value="3" onclick="btnClick(3)">
+            <input type="button" class="btn" value="-" onclick="btnClick('-')"> 
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="." onclick="btnClick('.')">
+            <input type="button" class="btn" value="0" onclick="btnClick(0)">
+            <input type="button" class="btn" value="=" onclick="cal()">
+            <input type="button" class="btn" value="+" onclick="btnClick('+')">
+        </div>
+    </div>
+    <script>
+        var btnNumClick = false;
+        function btnClick(char) {
+            if(btnNumClick == false) {
+                if(isNaN(char) == true) {
+
+                } else {
+                    document.getElementById('display').value += char;
+                }
+            } else {
+                document.getElementById('display').value += char;
+            }
+            
+            if(isNaN(char) == true) {
+                btnNumClick = false;
+            } else {
+                btnNumClick = true;
+            }
+        }
+        function cal() {
+            var display = document.getElementById('display');
+            var result = eval(display.value);
+            document.getElementById('result').value = result;
+        }
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+            document.getElementById("result").value = "";
+            num1 = 0;
+        }
+        function backSpace() {
+            display.value=display.value.slice(0,-1)
+        }
+        
+    </script>
+</body>
+</html>

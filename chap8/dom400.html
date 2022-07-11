@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mouseover / mouseout 이벤트 처리</title>
+    <script>
+        function f1(obj) {obj.src="image/image2.jpg";}
+        function f2(obj) {obj.src="image/image1.jpg";}
+    </script>
+</head>
+<body>
+    <h4>마우스를 그림 위로 이동하면.. </h4>
+    <img id="fg" src="image/image1.JPG" width="200" height="150" onmouseover="f1(this);" onmouseout="f2(this);" />    
+</body>
+</html>

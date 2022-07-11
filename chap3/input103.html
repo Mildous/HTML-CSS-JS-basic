@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>입력양식</title>
+    <!-- 103p 그림 3-8을 완성하여 nateget@nate.com으로 제출 -->
+</head>
+<body>
+    <form>
+        <h3>회원 정보</h3><hr><hr>
+        <fieldset>
+        <legend>인적사항</legend>
+        이&nbsp;름 : <input type="text" name="name" size=10 value="ID 입력요망"/>
+        주민번호 : <input type="text" name="frontID" size=8/>
+        -<input type="password" name="endID" size=8/><br>
+        국&nbsp;적 : <select name="country">
+            <option value = "korea">내국인(대한민국)</option>
+            <option value = "France">프랑스</option>
+            <option value = "USA">미국</option>
+            <option value = "Germany">독일</option>
+            <option value = "others">기타</option>
+            </select>&nbsp;<br>
+        취득 자격증 : <select name="license" size="1" multiple>
+            <option value = "정보처리기사 1급">정보처리기사 1급</option>
+            <option value = "정보처리산업기사">정보처리산업기사</option>
+            <option value = "컴퓨터활용능력 1급">컴퓨터활용능력 1급</option>
+            <option value = "컴퓨터활용능력 2급">컴퓨터활용능력 2급</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+        <legend>성별 & 학년</legend>
+        성별 : 
+        <input type="radio" name="gender" value="male" />남성
+        <input type="radio" name="gender" value="female"/>여성<br>
+        학년 : 
+        <input type="radio" name="year" value="freshman" />1학년
+        <input type="radio" name="year" value="sophomore" checked />2학년
+        <input type="radio" name="year" value="junior" />3학년
+        <input type="radio" name="year" value="senior" />4학년
+        </fieldset>
+
+        <fieldset>
+        <legend>취미</legend>
+        <input type="checkbox" name="hobby" value="s1" id="b1" /><label for="b1">독서</label>
+        <input type="checkbox" name="hobby" value="s2" id="b2" /><label for="b2">바둑</label>
+        <input type="checkbox" name="hobby" value="s3" id="b3" /><label for="b3">골프</label>
+        <input type="checkbox" name="hobby" value="s4" id="b4" /><label for="b4">등산</label>
+        <input type="checkbox" name="hobby" value="s5" id="b5" /><label for="b5">여행</label>
+        <input type="checkbox" name="hobby" value="s6" id="b6" /><label for="b6">기타</label>
+        </fieldset>
+
+        <fieldset>
+        <legend>메모사항</legend>
+        <textarea rows="5" cols="100" name="memo">
+        메모글을 남겨 주세요
+        </textarea><br>
+        </fieldset><br>
+        
+        첨부 서류 : <input type="file" name="filename" /><hr>
+        <td colspan="2"><input type="submit" value="저장하기" />
+        <input type="reset" value="다시 입력하기" /></td>
+    </form>
+</body>
+</html>

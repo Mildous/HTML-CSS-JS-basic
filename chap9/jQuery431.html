@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery를 이용한 요소 내용의 동적 변경</title>
+    <script src="../jQuery/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeContent() {$("#p1").html("이제부터는 자바스크립트를 공부합니다!");}
+        $(document).ready(function() {$('#b1').click(changeContent);});
+    </script>
+</head>
+<body>
+    <h3>What Can JavaScript Do ? </h3>
+    <p id="p1">지금까지 HTML과 CSS를 공부했습니다.</p>
+    <button id="b1">Next</button>
+</body>
+</html>

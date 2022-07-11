@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프런트엔드 개발자 지원서</title>
+    <!-- 최온유 -->
+    <style>
+        body {
+            padding: 10px 30px;
+        }
+        .legend {
+            font-weight: bold;
+        }
+        form>div {
+            padding: 5px 40px;
+        }
+        h1 {
+            margin-bottom: 25px;
+        }
+        hr {
+            width: 62%;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>프런트엔드 개발자 지원서</h1>
+    <p>HTML, CSS, Javascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p><hr><br>
+    <form>
+            <legend class="legend">개인정보</legend><br>
+            <div>
+            이 름 <input type="text" name="name" placeholder="공백없이 입력하세요"><br>
+            연락처 <input type="tel" name="tel"><br><br><br>
+            </div>
+            <legend class="legend">지원 분야</legend><br>
+            <div>
+                <input type="radio" name="support" value="pub"> 웹 퍼블리싱<br>
+                <input type="radio" name="support" value="app"> 웹 애플리케이션 개발<br>
+                <input type="radio" name="support" value="improv"> 개발 환경 개선<br><br><br>
+            </div>
+            <legend class="legend">지원 동기</legend><br>
+                <textarea name="motive" id="motive" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea><br>
+                <input type="submit" value="접수하기"> <input type="reset" value="다시 쓰기">
+    </form>
+</body>
+</html>

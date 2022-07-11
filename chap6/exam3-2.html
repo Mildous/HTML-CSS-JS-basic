@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>성적표</title>
+    <!-- 파일 data.js를 외부 자바스크립트로 연결해서 각 학생들의 총점과 평균을 계산한 후
+    학생 정보들(이름, 중간성적, 기말성적, 총점, 평균)을 표 형식으로 출력하시오. -->
+    <style>
+        td {width: 80px; text-align: center;}
+    </style>
+    <script src="data.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border=1 text-align=center>");
+        document.write("<tr><th>이름</th><th>중간고사</th><th>기말고사</th><th>총점</th><th>평균</th></tr>");
+        for (i=0; i<5; i++) {
+            document.write("<tr><td>" + stu[i].name + "</td><td>" 
+                + stu[i].middle + "</td><td>" + stu[i].final + "</td><td>"
+                + stu[i].total + "</td><td>" + stu[i].avg + "</td></tr>");
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

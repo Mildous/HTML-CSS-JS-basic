@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>성적 80점 이상</title>
+    <!-- 평균 성적이 80점 이상인 학생만 출력하시오 -->
+    <style>
+        td {width: 80px; text-align: center;}
+    </style>
+    <script src="data.js"></script>
+</head>
+<body>
+    <script>
+        document.write("<table border=1 text-align=center>");
+        document.write("<tr><th>이름</th><th>중간고사</th><th>기말고사</th><th>총점</th><th>평균</th></tr>");
+
+        for (i=0; i<5; i++) {
+            if(stu[i].avg >= 80) {
+            document.write("<tr><td>" + stu[i].name + "</td><td>" 
+                + stu[i].middle + "</td><td>" + stu[i].final + "</td><td>"
+                + stu[i].total + "</td><td>" + stu[i].avg + "</td></tr>");
+            }
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

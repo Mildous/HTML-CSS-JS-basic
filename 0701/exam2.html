@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam2.html</title>
+    <!-- 최온유 -->
+    <script src="https://code.jQuery.com\jquery-3.6.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js" integrity="sha512-x/vqovXY/Q4b+rNjgiheBsA/vbWA3IVvsS8lkQSX1gQ4ggSJx38oI2vREZXpTzhAv6tNUaX81E7QBBzkpDQayA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment-with-locales.min.js" integrity="sha512-vFABRuf5oGUaztndx4KoAEUVQnOvAIFs59y4tO0DILGWhQiFnFHiR+ZJfxLDyJlXgeut9Z07Svuvm+1Jv89w5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/locale/ko.min.js" integrity="sha512-3kMAxw/DoCOkS6yQGfQsRY1FWknTEzdiz8DOwWoqf+eGRN45AmjS2Lggql50nCe9Q6m5su5dDZylflBY2YjABQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        * { box-sizing: border-box;}
+        h3 { padding-left: 80px; margin-bottom: 0px;}
+        #time { width: 300px; height: 60px; background: rgb(77, 184, 255);}
+        #date1 { font-size: 22px; font-weight: bold; padding: 0 40px;}
+        #date2 { font-size: 22px; font-weight: bold; padding: 0 55px;}
+        #clickAfter { width: 300px; font-size: 12px; text-align: center;}
+    </style>
+</head>
+<div>
+    <h3>현재 날짜/시간</h3>
+    <div id="time">
+        <a id="date1"></a><br>
+        <a id="date2"></a>
+    </div>
+    <button id="btn">남은 시간</button>
+    <div id="clickAfter">
+        
+        </div>
+<script>
+    var date = new Date();
+    function f1() {
+        $("#clickAfter").html('백엔드(자바/프레임워크) 개발실무 & 정보처리산업기사 A과정의 수료예정일은 2022년 10월 13일 입니다.'+'<br>'+'수료일까지는'+'<a id="dDay"></a>'+'일이 남았습니다.');
+        $("#dDay").text(moment('20221013').diff(moment(), 'days'));
+    }
+    $(document).ready(function() {
+        $("#btn").click(f1);
+        $("#date1").text(moment(date).format('YYYY년M월D일dddd'));
+        $("#date2").text(moment(date).format('a HH : mm : ss'));
+    });
+</script>
+</body>
+</html>

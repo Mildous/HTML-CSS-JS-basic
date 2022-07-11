@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js300.html</title>
+</head>
+<body>
+<script>
+    var season = new Array("봄", "여름", "가을", "겨을");
+    season['mar'] = "춘곤기"; season['sep'] = "환절기";
+    document.write(" (1) for문 출력 : ");
+    for(i=0; i<season.length; i++)
+        document.write(season[i] + " ");
+    document.write("<hr>");
+    document.write(" (2) for-in문 출력 : ");
+    for(var key in season)
+        document.write(season[key] + " ");
+</script>
+</body>
+</html>

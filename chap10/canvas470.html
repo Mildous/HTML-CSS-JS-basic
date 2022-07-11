@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시계방향, 반시계방향 원호 그리기</title>
+    <canvas id="myCanvas" width="500" height="300" style="border: 1px solid #d3d3d3;"></canvas>
+    <script>
+         /** @type{CanvasRenderingContext2D} */ 
+        var c = document.getElementById("myCanvas");
+        var obj = c.getContext("2d");
+
+        // 사각형 그리기
+        obj.beginPath();    // 경로 그리기 시작
+        obj.rect(350, 50, 100, 80); // 사각형 그리기
+        obj.lineWidth = 3;  // 라인 두께 지정
+        obj.strokeStyle = "red";    // 라인 색상 지정
+        obj.lineJoin = "round"; // 모서리선 유형 지정
+        obj.fillStyle = "yellow";    // 사각형 내부 색상 지정
+        obj.stroke();   // 캔버스 나타내기
+        obj.fill(); // 캔버스 사각형 내부 채우기
+
+        // 중심:(130, 80), 반지름:80px, 0도~1.5PI 원 그리기
+        obj.moveTo(130, 80);    obj.arc(80, 80, 50, 0, 2 * Math.PI);
+        obj.stroke();   // 캔버스 나타내기
+
+        // 중심:(100, 250), 반지름:50px, 0도~1.5PI 원 그리기
+        obj.beginPath();    obj.moveTo(100, 250);
+        obj.lineTo(200, 200);
+        obj.arc(140, 200, 60, 0, 1.5*Math.PI, true);
+        obj.closePath();    //원뿔 그리기
+        obj.stroke();   //캔버스 나타내기
+
+        // 다각형(삼각형) 그리기
+        obj.beginPath();    //경로 그리기 시작
+        obj.moveTo(350, 200);   //현재 위치 이동
+        obj.lineTo(450, 270);   //직선 그리기
+        obj.lineTo(400, 150);   //직선 그리기
+        obj.closePath();    //직선 그리기
+        obj.stroke();   //캔버스 나타내기
+        obj.fillStyle = "green";    //삼각형 내부 색상 지정
+        obj.fill(); //삼각형의 내부 채우기
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

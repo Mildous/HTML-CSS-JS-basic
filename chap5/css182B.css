@@ -1,0 +1,6 @@
+/*출력 스타일: 메뉴 리스트 수평 출력*/
+ul {background-color: lightgray; padding: 6px;}
+li {display: inline; padding: 10px 10px;}
+a {color: #000; text-decoration: none; 
+    padding: 5px 10px;}
+a:hover {background-color: gray; color: white;}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam6.html</title>
+    <!-- 최온유 -->
+    <style>
+        #container {height: 500px;}
+        #header {background:rgb(25, 105, 255); color: white; height: 15%;
+                text-align: center;
+                line-height: 180%;
+                margin:5px; box-shadow: 8px 8px rgb(90, 186, 255);
+                text-shadow: 0px 0px 10px black;
+                border-top-left-radius: 30px 30px;
+                border-top-right-radius: 30px 30px;
+                border-bottom-left-radius: 30px 30px;
+                border-bottom-right-radius: 30px 30px;
+                font-size: 40px;
+            }
+        #menu {color: white; float: left; width: 20%; height: 75%; text-align: center;
+                z-index: 1; overflow-x: hidden; text-shadow: 1px 1px 5px rgb(25, 105, 255);
+                font-size: medium; font-weight: bold;
+                }
+        #menu a {display: block; color: rgb(25, 105, 255); padding: 15px; width: 140px; text-decoration: none; border-radius: 30px; background-color: rgb(90, 186, 255); margin: 34px 0;}
+        #menu a:hover {background-color: rgb(25, 105, 255); color: rgb(90, 186, 255); }
+        #content {background: white; float: left; width: 58%; height: 75%; border-radius: 10px; margin: 5px;}
+        #side {background: rgb(90, 186, 255); float: left; width: 20%; height: 30%; border-radius: 10px; 
+                margin-top: 30px; text-align: center;}
+        li {text-align: left;}
+        #footer {background: rgb(25, 105, 255); clear:both; height: 10%; text-align: center; border-radius: 10px;
+                font-size: medium; line-height: 300%; margin: 5px;}
+        #f1 {margin: 0px 0px; padding: 0px 0px; border: 0px; width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">반응형 웹 디자인</div>
+    <div id="menu">
+        <a href="exam6-1.html" target="if1">HTML</a>
+        <a href="exam6-2.html" target="if1">CSS</a>
+        <a href="exam6-3.html" target="if1">Javascript</a>
+        <a href="exam6-4.html" target="if1">jQuery</a>
+    </div>
+    <div id="content">
+        <iframe src="exam6-1.html" name="if1" id="f1" seamless></iframe>
+    </div>
+    <div id="side">참고내용
+        <ul>
+            <li>참고내용 1</li>
+            <li>참고내용 2</li>
+            <li>참고내용 3</li>
+            <li>참고내용 4</li>
+        </ul>
+    </div>
+    <div id="footer">copyright&copy;한국IT교육원 대구국비지원 AI인공지능 컴퓨터학원, All rights Reserved.</div>
+</div>
+</body>
+</html>

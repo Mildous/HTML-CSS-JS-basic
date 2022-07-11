@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float204.html</title>
+    <style>
+        .box {background-color: gray; color: white;}
+        .floating {background-color: lightgray; margin: 2px; float: left;}
+        body {height: 400px;}
+        #b1 {height: 20%;}
+        #b2 {height: 65%;}
+        #f1 {width: 17%; height: 100%;}
+        #f2 {width: 50%; height: 100%;}
+        #f3 {width: 30%; height: 100%;}
+        #b3 {height: 10%; clear: left;}
+    </style>
+</head>
+<body>
+    <div class="box" id="b1">헤더 박스</div>
+    <div id="b2">
+        <div class="floating" id="f1">플로팅박스 1</div>
+        <div class="floating" id="f2">플로팅박스 2</div>
+        <div class="floating" id="f3">플로팅박스 3</div>
+    </div>
+    <div class="box" id="b3">푸터 박스</div>
+</body>
+</html>

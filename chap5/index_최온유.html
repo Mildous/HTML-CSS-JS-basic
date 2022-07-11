@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index_최온유.html</title>
+    <style>
+        #container {height: 500px;}
+        #header {background:dimgray; color: white; height: 15%;
+                text-align: center;
+                line-height: 180%;
+                margin:5px; box-shadow: 5px -5px lightgray;
+                text-shadow: 0px 0px 10px #0000FF;
+                border-top-left-radius: 60px 30px;
+                border-top-right-radius: 60px 30px;
+                border-bottom-left-radius: 30px 60px;
+                border-bottom-right-radius: 30px 60px;
+                font-size: 40px;
+            }
+        #menu {color: white; float: left; width: 20%; height: 75%; text-align: center;
+                z-index: 1; overflow-x: hidden; text-shadow: 0px 0px 10px #0000FF;
+                font-size: large;
+                }
+        #menu a {display: block; color: white; padding: 22px; text-decoration: none; border-radius: 30px;
+                background-color: dimgray; margin: 5px;}
+        #menu a:hover {background-color: lightgray; color: lightgray; }
+        #content {background: ghostwhite; float: left; width: 58%; height: 75%; border-radius: 10px; margin: 5px;}
+        #side {background: gainsboro; float: left; width: 20%; height: 75%; border-radius: 10px; 
+                margin-top: 5px; text-align: center;}
+        li {text-align: left;}
+        #footer {background: darkgray; clear:both; height: 10%; text-align: center; border-radius: 10px;
+                font-size: medium; line-height: 300%; margin: 5px;}
+        #f1 {margin: 0px 0px; padding: 0px 0px; border: 0px; width: 100%; height: 100%;}
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="header">웹 페이지 타이틀</div>
+    <div id="menu">
+        <a href="">메뉴항목 1</a>
+        <a href="">메뉴항목 2</a>
+        <a href="">메뉴항목 3</a>
+        <a href="">메뉴항목 4</a>
+        <a href="">메뉴항목 5</a>
+    </div>
+    <div id="content">
+        <iframe src="sample.htm" name="frameName" id="f1" seamless></iframe>
+    </div>
+    <div id="side">참고내용
+        <ul>
+            <li>참고내용 1</li>
+            <li>참고내용 2</li>
+            <li>참고내용 3</li>
+            <li>참고내용 4</li>
+        </ul>
+    </div>
+    <div id="footer">연락처 : 010-1234-1234&nbsp;&nbsp;©right; 웹-페이지 개발자</div>
+</div>
+</body>
+</html>

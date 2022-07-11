@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-soperatore=1.0">
+    <title>계산기</title>
+    <!-- eval() 내장함수를 사용하지 않고 만들기 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display">
+        <input type="text" id="result">
+        <div class="buttonWrap">
+            <input type="button" class="btnTop" value="Back" onclick="backSpace()">
+            <input type="button" class="btnTop" value="C" onclick="clearDisplay()">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="7" onclick="btnClick(7)">
+            <input type="button" class="btn" value="8" onclick="btnClick(8)">
+            <input type="button" class="btn" value="9" onclick="btnClick(9)">
+            <input type="button" class="btn" value="/" onclick="operator('/')">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="4" onclick="btnClick(4)">
+            <input type="button" class="btn" value="5" onclick="btnClick(5)">
+            <input type="button" class="btn" value="6" onclick="btnClick(6)">
+            <input type="button" class="btn" value="*" onclick="operator('*')">
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="1" onclick="btnClick(1)">
+            <input type="button" class="btn" value="2" onclick="btnClick(2)">
+            <input type="button" class="btn" value="3" onclick="btnClick(3)">
+            <input type="button" class="btn" value="-" onclick="operator('-')"> 
+        </div>
+        <div class="buttonWrap">
+            <input type="button" class="btn" value="." onclick="btnClick('.')">
+            <input type="button" class="btn" value="0" onclick="btnClick(0)">
+            <input type="button" class="btn" value="=" onclick="cal()">
+            <input type="button" class="btn" value="+" onclick="operator('+')">
+        </div>
+    </div>
+    <script>
+        var num1 = 0;
+        var op;
+        function btnClick (a) {
+            result.value += a;
+        }
+        function operator (b) {
+            
+            var inputNum = (document.getElementById("result").value);
+            num1 = inputNum;
+            display.value += num1;
+            display.value += b;
+            op = b ;
+            return document.getElementById("result").value = "";
+        }
+        function cal () {
+            var num2 = parseFloat(document.getElementById("result").value);
+            display.value += num2;
+            var result ;
+            var tmp;
+            
+            switch (op) {
+                case '+' : result = Number(num1) + Number(num2) ;
+                document.getElementById("result").value = result;
+                break;
+                case '-' : result = Number(num1) - Number(num2) ; 
+                document.getElementById("result").value = result;
+                break;
+                case '*' : result = Number(num1) * Number(num2) ; 
+                document.getElementById("result").value = result;
+                break;
+                case '/' : result = Number(num1) / Number(num2) ; 
+                document.getElementById("result").value = result;
+                break;
+            }
+        }
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+            document.getElementById("result").value = "";
+            num1 = 0;
+        }
+        function backSpace() {
+            display.value=display.value.slice(0,-1)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+table {table-layout: auto; width: 80%; height: 200px; 
+    border-collapse: collapse; 
+    border-top: 5px solid blue; 
+    border-bottom: 5px solid blue; 
+    background: skyblue; 
+    border-left: skyblue; 
+    border-right: skyblue;}
+    th {border-bottom: 3px solid blue;}
+    td {text-align: center; border: 1px dotted red; width: 20%;}
+    .c0 {border-left: skyblue;}
+    .c4 {border-right: skyblue;}
+    tr:first-child {background-color: lightgray;}
+    tr:hover {background-color: orange;}
